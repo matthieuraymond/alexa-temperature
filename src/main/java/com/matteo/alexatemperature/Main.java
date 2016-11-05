@@ -1,38 +1,27 @@
 package com.matteo.alexatemperature;
 
-import java.io.File;
-import java.util.Scanner;
+import spark.ModelAndView;
+import spark.template.freemarker.FreeMarkerEngine;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.get;
 
 public class Main {
 
-    private static String THERM_ADDRESS = "28-0316453fdaff";
+    private static Thermometer thermometer = new Thermometer("28-0316453fdaff");
 
     public static void main(String[] args) {
-        get("temperature/current", (req, res) -> getTemperature());
-    }
+        get("/temperature/current", (req, res) -> thermometer.getTemperature());
 
-    private static float getTemperature() {
-        String data = getThermometerData();
-        int temperature = Integer.parseInt(data.substring(data.indexOf("t=") + 2)) / 100; // To delete irrelevant numbers
+        get("/temperature", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("temperature", FileHandler.readFile("../../../../../../data.txt"));
 
-        return temperature/10f; // /1000 to convert in celsius
-    }
-
-    private static String getThermometerData() {
-        try {
-            Scanner sc = new Scanner(new File("/sys/bus/w1/devices/" + THERM_ADDRESS + "/w1_slave"));
-            StringBuilder sb = new StringBuilder();
-            while(sc.hasNextLine()) {
-                sb.append(sc.nextLine());
-            }
-            sc.close();
-
-            return sb.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "t=0";
-        }
+            // The display.ftl file is located in directory:
+            // src/test/resources/spark/template/freemarker
+            return new ModelAndView(attributes, "display.ftl");
+        }, new FreeMarkerEngine());
     }
 }

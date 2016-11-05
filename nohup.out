@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.matteo.alexatemperature:alexatemperature:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 10, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building alexatemperature 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ alexatemperature ---
+[Thread-1] INFO org.eclipse.jetty.util.log - Logging initialized @15110ms
+[Thread-1] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - == Spark has ignited ...
+[Thread-1] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:4567
+[Thread-1] INFO org.eclipse.jetty.server.Server - jetty-9.3.6.v20151106
+[Thread-1] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@1173f9c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Thread-1] INFO org.eclipse.jetty.server.Server - Started @15702ms
+[qtp9306509-12] INFO spark.http.matching.MatcherFilter - The requested route [/favicon.ico] has not been mapped in Spark
+[qtp9306509-12] INFO spark.http.matching.MatcherFilter - The requested route [/favicon.ico] has not been mapped in Spark
+[qtp9306509-17] INFO spark.http.matching.MatcherFilter - The requested route [/] has not been mapped in Spark
+[qtp9306509-13] WARN org.eclipse.jetty.http.HttpParser - Illegal character 0x0 in state=HEADER_VALUE for buffer HeapByteBuffer@130bf1b[p=96,l=100,c=8192,r=4]={POST / HTTP/1.1\r\n...: 0\r\nReferer: \x00<<<\r\n\r\n>>>Transfer-Encoding...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+[qtp9306509-13] WARN org.eclipse.jetty.http.HttpParser - bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@18d4a11{r=0,c=false,a=IDLE,uri=null}
+[qtp9306509-17] INFO spark.http.matching.MatcherFilter - The requested route [/] has not been mapped in Spark
+[qtp9306509-13] WARN org.eclipse.jetty.http.HttpParser - Illegal character 0x0 in state=HEADER_VALUE for buffer HeapByteBuffer@a9f12b[p=96,l=100,c=8192,r=4]={POST / HTTP/1.1\r\n...: 0\r\nReferer: \x00<<<\r\n\r\n>>>l+xml,application...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+[qtp9306509-13] WARN org.eclipse.jetty.http.HttpParser - bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@1c3f32d{r=0,c=false,a=IDLE,uri=null}
+[qtp9306509-14] INFO spark.http.matching.MatcherFilter - The requested route [/favicon.ico] has not been mapped in Spark
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.matteo.alexatemperature:alexatemperature:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 10, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building alexatemperature 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ alexatemperature ---
+[Thread-1] INFO org.eclipse.jetty.util.log - Logging initialized @14949ms
+[Thread-1] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - == Spark has ignited ...
+[Thread-1] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:4567
+[Thread-1] INFO org.eclipse.jetty.server.Server - jetty-9.3.6.v20151106
+[Thread-1] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@1831e00{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Thread-1] INFO org.eclipse.jetty.server.Server - Started @15501ms
+cat: /sys/bus/w1/devices/28-0316453fdaff/w1_slave: No such file or directory
+cat: /sys/bus/w1/devices/28-0316453fdaff/w1_slave: No such file or directory
