@@ -60,7 +60,6 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-var data="{$temperature}";
 data.forEach(function(d) {
  d.dtg = parseDate(d.dtg);
  d.temperature = +d.temperature;
